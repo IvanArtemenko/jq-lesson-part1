@@ -1,0 +1,45 @@
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0075DA;
+  font: 16px Consolas, sans-serif;
+}
+
+.main-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.btn {
+  width: 150px;
+  margin-top: 5px;
+}
+
+.main-content {
+  float: right;
+  padding: 10px;
+  color: white;
+}
+
+.hidden-text {
+  display: none;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+a:link, a:active, a:visited {
+  color: white;
+}
