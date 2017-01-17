@@ -6,7 +6,7 @@ jQuery(function ($) {
     var $checkBox = $("#checkbox");
 
     $onChangeInput.on("keyup", function () {
-        var thisVal = $(this).val();
+        var thisVal = $(this).value;
         $secondInput.val(thisVal);
 
         console.log(thisVal);
@@ -16,8 +16,8 @@ jQuery(function ($) {
         e.preventDefault();
         var radioVal = $radio.is(":checked");
         var checkBoxVal = $checkBox.is(":checked");
-        var inputVal = $onChangeInput.val();
-        var secondInputVal = $secondInput.val();
+        var inputVal = $onChangeInput.value;
+        var secondInputVal = $secondInput.value;
 
         console.log(radioVal, checkBoxVal, inputVal, secondInputVal);
     });

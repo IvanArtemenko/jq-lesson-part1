@@ -1,23 +1,23 @@
 jQuery(function ($) {
 
-    var $addClassBtn = $("#add-class");
-    var $removeClassBtn = $("#remove-class");
-    var $toggleClassBtn = $("#toggle-class");
-    var $getAttrBtn = $("#get-attr");
-    var $setAttrBtn = $("#set-attr");
-    var $clickAlertBtn = $("#click-alert");
-    var $triggerAlertBtn = $("#trigger-alert");
-    var $cloneThisBtn = $("#clone-this");
-    var $closestElement = $("#closest-element");
-    var $eachBtnText = $("#each-btn-text");
-    var $findMe = $("#find-me");
-    var $fadeInText = $("#fade-in-text");
-    var $hiddenText = $(".hidden-text");
-    var $visibleText = $(".visible-text");
-    var $fadeOutText = $("#fade-out-text");
-    var $hideText = $("#hide-text");
-    var $showText = $("#show-text");
-    var $dataAboutMe = $("#data-about-me");
+    var $addClassBtn = $("#add-class"),
+        $removeClassBtn = $("#remove-class"),
+        $toggleClassBtn = $("#toggle-class"),
+        $getAttrBtn = $("#get-attr"),
+        $setAttrBtn = $("#set-attr"),
+        $clickAlertBtn = $("#click-alert"),
+        $triggerAlertBtn = $("#trigger-alert"),
+        $cloneThisBtn = $("#clone-this"),
+        $closestElement = $("#closest-element"),
+        $eachBtnText = $("#each-btn-text"),
+        $findMe = $("#find-me"),
+        $fadeInText = $("#fade-in-text"),
+        $hiddenText = $(".hidden-text"),
+        $visibleText = $(".visible-text"),
+        $fadeOutText = $("#fade-out-text"),
+        $hideText = $("#hide-text"),
+        $showText = $("#show-text"),
+        $dataAboutMe = $("#data-about-me");
 
     $addClassBtn.on("click", function () {
         $(this).addClass("btn-success");
@@ -60,14 +60,18 @@ jQuery(function ($) {
 
     $eachBtnText.on("click", function () {
         var allBtns = $(".btn-primary");
+        var arr = [];
 
-        for (var i = 0; i < allBtns.length; i++) {
-            console.log(allBtns.text());
-        }
+        allBtns.each(function () {
+            var text = $(this).text();
+            arr.push(text);
+        });
+
+        console.log(arr);
     });
 
     $findMe.on("click", function () {
-        console.log( $("body").children().find(this).prop("outerHTML") );
+        console.log( $("body").find(this).prop("outerHTML") );
     });
 
     $fadeInText.on("click", function () {
